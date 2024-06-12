@@ -15,6 +15,8 @@ def First_Occurance(arr, target, low, high):
             else:
                 low = mid+1
 
+    return -1
+
 # Driver code
 if __name__ == "__main__":
     
