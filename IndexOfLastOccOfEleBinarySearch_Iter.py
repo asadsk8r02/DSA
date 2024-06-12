@@ -1,6 +1,6 @@
 # Iterative approach
 
-def First_Occurance(arr, target, low, high):
+def Last_Occurance(arr, target, low, high):
     low = 0
     high = len(arr)-1
     while low <= high:
@@ -23,7 +23,7 @@ if __name__ == "__main__":
     arr = [5,10,10,10,20,20,20,20,20,30,30,30,30,30,40,40,40]
     target = 10
 
-    result = First_Occurance(arr, target, 0, len(arr)-1)
+    result = Last_Occurance(arr, target, 0, len(arr)-1)
 
     if result != -1:
         print(f"{target} found at index {result}")
