@@ -12,8 +12,10 @@ unsorted_list.sort()
 x = ['q', 'w', 'r', 'e', 't', 'y'] 
 print(sorted(x))
 
+# a stable sorting algorithm maintains the relative order of records with equal keys (or values). This means that if two elements are equal in value, their original order in the input list will be preserved in the sorted list.
 
-# TIMSORT Algorithm
+
+# TIMSORT Algorithm - Stable Algo 
 
 MIN_MERGE = 32
 
