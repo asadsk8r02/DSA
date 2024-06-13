@@ -2,7 +2,8 @@
 # O(N) - Best case sorted
 # Multiple Passes
 # Not very practical application
-# Stabel and swaps adjacent data
+# Stable and swaps adjacent data
+# Inplace algo
 
 class Bubblesort:
     def __init__(self) -> None:
