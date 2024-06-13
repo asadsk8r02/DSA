@@ -4,15 +4,18 @@
 
 # sorted(L, key = Any function, reverse = True/False) always return a NEW LIST and can be applied on any iterable(list, string, tuple) or collection (dictionary, set, frozenset) or any other iterator that needs to be sorted.
 
-# .sort
+# .sort()
 unsorted_list = [2,4,5,32,6,255,5,42]
 unsorted_list.sort()
 
-# Sorted
+# Sorted()
 x = ['q', 'w', 'r', 'e', 't', 'y'] 
 print(sorted(x))
 
-# a stable sorting algorithm maintains the relative order of records with equal keys (or values). This means that if two elements are equal in value, their original order in the input list will be preserved in the sorted list.
+# A stable sorting algorithm maintains the relative order of records with equal keys (or values). This means that if two elements are equal in value, their original order in the input list will be preserved in the sorted list.
+
+# Stable Algorithms - Merge sort, Bubble sort, Insertion sort. --> BIM
+# Unstable Algorithm - Selection Sort, Quick sort, Heap Sort. --> HSQ
 
 
 # TIMSORT Algorithm - Stable Algo 
