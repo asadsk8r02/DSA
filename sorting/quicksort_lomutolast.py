@@ -1,5 +1,7 @@
 #  Quick sort with Lomuto Partition
 
+# L --- < pivot ---- i ----- >= pivot ----- j ---Yet to be determined---- H
+
 def partition(arr, low, high):
     pivot = arr[high]
     i = low - 1
