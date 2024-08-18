@@ -9,3 +9,12 @@ Omega notation represents the lower bound of an algorithm's runtime. It gives th
 # Theta Notation (Θ)
 
 Theta notation provides a tight bound on the algorithm's runtime, meaning it describes both the upper and lower bounds. If an algorithm has a time complexity of Θ(n)/Theta(n), it means that the time taken by the algorithm grows linearly with the input size, both in the best and worst cases. In other words, Theta notation implies that the algorithm's runtime is both O(n) and Ω(n)/Omega(n).
+
+
+# Theta (Θ) vs. Big O (O) and Omega (Ω):
+
+* Theta provides a tight bound, meaning it describes the exact growth rate of an algorithm, not just the upper or lower bound.
+* If an algorithm's runtime is described by Theta, it means both Big O and Omega bounds are equal, so the algorithm’s runtime will always fall within this bound.
+* Big O gives you the upper bound (worst-case).
+* Omega gives you the lower bound (best-case).
+* Theta gives you the exact bound (tight bound) when both the upper and lower bounds are the same.
