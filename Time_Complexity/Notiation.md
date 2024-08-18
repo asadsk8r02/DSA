@@ -33,7 +33,32 @@ Here:
 * n/b: The size of each subproblem (where b>1).
 * O(n^d): The time complexity of the work done outside the recursive calls, i.e., the cost of dividing the problem and combining the results.
 
+## Cases of the Master Theorem
+The Master Theorem provides three distinct cases based on the relationship between aaa, bbb, and ddd, which determine the overall time complexity T(n)T(n)T(n):
 
+### Case 1: a>b<sup>d</sup>
+
+Condition: log<sub>b</sub>(a) > d
+
+Time Complexity: T(n) = O(n <sup>log<sub>b</sub>(a)</sup>)
+
+Explanation: The recursive part (i.e., the subproblems) dominates the overall time complexity. The number of subproblems grows faster than the cost of the work done outside the recursive calls.
+
+### Case 2: a=b<sup>d</sup>
+
+Condition: log<sub>b</sub>(a) = d
+
+Time Complexity: T(n)=O(n<sup>d</sup>log(n))
+
+Explanation: The recursive part and the work done outside the recursive calls contribute equally to the time complexity. The logarithmic factor arises due to the height of the recursion tree.
+
+### Case 3: a<b<sup>d</sup>
+
+Condition: log<sub>b</sub>(a) < d
+
+Time Complexity: T(n)=O(n<sup>d</sup>)
+
+Explanation: The work done outside the recursive calls dominates the overall time complexity. The cost of dividing and combining the subproblems outweighs the recursive costs.
 
 
 
