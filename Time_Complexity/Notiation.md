@@ -61,6 +61,80 @@ Time Complexity: T(n) = O(n<sup>d</sup>)
 Explanation: The work done outside the recursive calls dominates the overall time complexity. The cost of dividing and combining the subproblems outweighs the recursive costs.
 
 
+# Recursion Tree Method
+The Recursion Tree Method is a visual and intuitive approach to analyzing the time complexity of recursive algorithms. It helps you understand how the total work of a recursive algorithm is distributed across the different levels of recursion. The method involves constructing a tree where each node represents a recursive call, and the edges represent the progression from one call to the next.
+
+## Steps to Apply the Recursion Tree Method
+### 1. Write the Recurrence Relation:
+
+* Start by writing the recurrence relation that represents the time complexity of the recursive algorithm.
+
+* Example: For a problem of size n, if the algorithm divides the problem into a subproblems of size n/b and does O(n<sup>d</sup>) work outside the recursive calls, the recurrence relation is:
+
+<img width="489" alt="image" src="https://github.com/user-attachments/assets/a3c40747-f7d2-4455-abca-8a2683c6da16">
+
+### 2. Construct the Recursion Tree:
+
+* Draw the root of the tree to represent the original problem of size n. The work done at this level is O(n<sup>d</sup>).
+* From the root, draw a branches to represent the a recursive subproblems of size n/b. Each of these subproblems will have its own subtree.
+* Repeat this process recursively for each subproblem until you reach the base case (typically when the problem size becomes 1 or a constant).
+
+### 3. Calculate the Work at Each Level:
+
+* For each level of the tree, calculate the total amount of work done by summing the work across all nodes at that level.
+* The work at the i-th level of the tree is typically the number of nodes at that level multiplied by the cost of work at each node.
+* For example, if there are a<sup>i</sup> nodes at level i and each node at that level does O((n/b<sup>i</sup>)<sup>d</sup>) work, the total work at level i is:
+
+<img width="664" alt="image" src="https://github.com/user-attachments/assets/139ebd91-b34d-499d-a919-df11cdf3b5dc">
+
+### 4. Sum the Work Across All Levels:
+
+* Sum the work across all levels of the tree to get the total time complexity T(n).
+* If the tree has log<sub>b</sub> n levels, you sum the work done at each level from i = 0 to i = log<sub>b</sub> n.
+* The total time complexity is the sum of work done at all levels:
+
+<img width="353" alt="image" src="https://github.com/user-attachments/assets/b8a2e55b-8405-4da7-811e-37b256a07aef">
+
+### 5. Simplify the Sum:
+
+* After summing the work done at each level, simplify the expression to obtain the final time complexity.
+
+## Example: Analyzing Merge Sort Using Recursion Tree Method
+
+Recurrence Relation:
+
+T(n) = 2T(n/2) + O(n)
+
+### 1. Construct the Recursion Tree:
+At the root (level 0), we have T(n) = O(n).
+The root has 2 children, each representing a subproblem of size n/2, and each child does T(n/2) = O(n/2) work.
+This process continues until the base case is reached.
+
+### 2. Calculate Work at Each Level:
+* Level 0: 1 node, work = O(n)
+* Level 1: 2 nodes, work = 2 × O(n/2) = O(n)
+* Level 2: 4 nodes, work = 4 × O(n/4) = O(n)
+…
+* Level i: 2<sup>i</sup> nodes, work = 2<sup>i</sup> × O(n/2<sup>i</sup>) = O(n)
+
+### 3.Sum the Work Across All Levels:
+* Since each level does O(n) work and there are log<sub>2</sub> n levels:
+
+T(n) = O(n) + O(n) + … + O(n) (log n terms)
+
+* Total work = O(n log n).
+
+## Key Points to Remember
+* Balanced Recursion Trees: When the recursive algorithm divides the problem into equal-sized subproblems (like merge sort), the recursion tree is balanced, making it easier to sum the work across levels.
+* Unbalanced Recursion Trees: For algorithms like quicksort, where the partition might not always be balanced, the recursion tree can be skewed. The method still applies but requires careful attention to the varying size of subproblems.
+* Base Cases: The height of the tree is typically log<sub>b</sub> n, where b is the factor by which the problem size decreases in each recursive step. The work done at the base case level is usually a constant.
+
+
+
+
+
+
+
 
 
 
