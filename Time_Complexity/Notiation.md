@@ -18,3 +18,26 @@ Theta notation provides a tight bound on the algorithm's runtime, meaning it des
 * Big O gives you the upper bound (worst-case).
 * Omega gives you the lower bound (best-case).
 * Theta gives you the exact bound (tight bound) when both the upper and lower bounds are the same.
+
+# Master Theorem Overview
+The Master Theorem is a tool used to analyze the time complexity of divide-and-conquer algorithms, which are algorithms that solve a problem by recursively breaking it down into smaller subproblems of the same type. It provides a straightforward way to determine the time complexity of recurrences that fit a specific form.
+
+## Form of Recurrence for the Master Theorem
+The Master Theorem applies to recurrences of the following form:
+
+<img width="489" alt="image" src="https://github.com/user-attachments/assets/a3c40747-f7d2-4455-abca-8a2683c6da16">
+
+Here:
+* T(n): The total time complexity for a problem of size nnn.
+* a: The number of subproblems generated in each step.
+* n/b: The size of each subproblem (where b>1).
+* O(n^d): The time complexity of the work done outside the recursive calls, i.e., the cost of dividing the problem and combining the results.
+
+
+
+
+
+
+
+
+
